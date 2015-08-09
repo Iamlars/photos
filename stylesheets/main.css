@@ -1,0 +1,122 @@
+.photo-browser-wrap{display: none}
+
+.photo-browser{
+    z-index: 9998;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+}
+
+.photo-browser .fa{
+    z-index: 9999;
+    position: absolute;
+    font-size: 70px;
+    color: #fff;
+    top:50%;
+    margin-top: -35px;
+    text-align: center;
+    cursor: pointer;
+}
+.photo-browser .fa.disable{
+    color: #666;
+    cursor: default;
+}
+.photo-browser .fa-close{
+    right: 10px;
+    top:50px;
+    font-size: 20px;
+}
+.photo-browser .fa-search-plus{
+    right: 70px;
+    top:50px;
+    font-size: 20px;
+}
+.photo-browser .fa-search-minus{
+    right: 40px;
+    top:50px;
+    font-size: 20px;
+}
+.photo-browser .fa-angle-left{
+    left: 10px;
+}
+.photo-browser .fa-angle-right{
+    right:10px;
+}
+.photo-browser .photo-index{
+    z-index: 10000;
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    margin-left: -50px;
+    top:15px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+.photo-browser .content{
+    z-index: 9998;
+    width: 10000px;
+    overflow: hidden;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.photo-browser .content img{
+    display: inline-block;
+    position: relative;
+    border: 10px solid #fff;
+    background: #eee;
+}
+.photo-browser .content img.not-drag{
+    -webkit-transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    transition: all .4s linear;
+}
+.photo-browser .thumb-wrap{
+    z-index: 10000;
+    position: absolute;
+    padding: 10px 0;
+    left: 0;
+    bottom:0;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.photo-browser .thumb-box{
+    width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+.photo-browser .thumb{
+    position: relative;
+    width: 9999px;
+}
+.photo-browser .thumb span{
+    display: inline-block;
+    width: 80px;
+    line-height: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin:0 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.photo-browser .thumb span.active{
+    border: 3px solid #fff;
+}
+.photo-browser .thumb img{
+    width: 100%;
+    vertical-align: middle;
+}
+.photo-browser-bg{
+    z-index: 9997;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background: #000;
+    opacity: 0.8;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>一个页面查看的相册</title>
+    <link rel="stylesheet" href="stylesheets/reset.css"/>
+    <link rel="stylesheet" href="stylesheets/main.css"/>
+</head>
+<body>
+
+<div id="photo">
+    <img src="images/1.jpg" alt=""/>
+    <img src="images/2.jpg" alt=""/>
+    <img src="images/3.jpg" alt=""/>
+    <img src="images/4.jpg" alt=""/>
+    <img src="images/5.jpeg" alt=""/>
+    <img src="images/6.jpg" alt=""/>
+    <img src="images/6.jpeg" alt=""/>
+    <img src="images/8.jpeg" alt=""/>
+    <img src="images/7.jpg" alt=""/>
+</div>
+
+<div class="photo-browser-wrap">
+    <div class="photo-browser">
+        <div class="photo-index" id="J_index_photo">0/0</div>
+        <div class="fa fa-close" id="J_close_photo"></div>
+        <div class="fa fa-search-plus" id="J_scale_plus" title="放大"></div>
+        <div class="fa fa-search-minus" id="J_scale_minus" title="缩小"></div>
+
+        <div class="fa fa-angle-left" id="J_prev_photo"></div>
+        <div class="fa fa-angle-right" id="J_next_photo"></div>
+        <div class="content-wrap">
+            <div class="content" id="J_content_photo"><img class="not-drag" width="500" height="100" src="" alt=""/></div>
+        </div>
+        <div class="thumb-wrap">
+            <div class="thumb-box">
+                <div class="thumb"></div>
+            </div>
+        </div>
+    </div>
+    <div class="photo-browser-bg"></div>
+</div>
+
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="javascripts/photo.js"></script>
+<script>
+    $(function(){
+        // 以下为默认设置
+        $('#photo').Photo({
+            // 应用相册查看器的标签，可以是 ".img" 也可以是 "img"
+            target: 'img',
+            // 最大放大倍数
+            maxScale: 3,
+            // 最小缩小倍数
+            minScale: 0.5,
+            // 图片左右切换的按钮
+            prevBtn: $('#J_prev_photo'),
+            nextBtn: $('#J_next_photo'),
+            // 是否加载字体图标库
+            loadFont: true,
+            // 是否允许图片拖动
+            isDrag: true
+        });
+    })
+</script>
+</body>
+</html>
